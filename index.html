@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Tech Quiz!</h1>
+        <p>Select a level to begin:</p>
+        <div class="level-selection">
+            <button onclick="startQuiz('easy')">Easy</button>
+            <button onclick="startQuiz('moderate')">Moderate</button>
+            <button onclick="startQuiz('difficult')">Difficult</button>
+        </div>
+        <div id="quiz-section" class="hidden">
+            <h2 id="level-title"></h2>
+            <div id="question-section">
+                <p id="question"></p>
+                <div id="options"></div>
+            </div>
+            <button onclick="nextQuestion()">Next</button>
+            <p id="feedback"></p>
+        </div>
+        <div id="result-section" class="hidden">
+            <h2>Your Score</h2>
+            <p id="score"></p>
+            <p id="streak-message"></p>
+            <button onclick="restartQuiz()">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
